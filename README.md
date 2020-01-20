@@ -12,6 +12,10 @@ npm install
 npm start
 
 http://localhost:3000/index.html
+
+打开 浏览器 console 控制台
+
+点击按钮 发送请求
 ```
 
 git checkout -b dev_kjf origin/dev_kjf
