@@ -1,0 +1,19 @@
+{
+    "name": "jsonp-test",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "npm run dev",
+        "dev": "supervisor index.js"
+    },
+    "dependencies": {
+        "connect-mongo": "^2.0.3",
+        "cookie-parser": "^1.4.3",
+        "ejs": "^2.6.1",
+        "express": "^4.16.4",
+        "express-session": "^1.15.6",
+        "mongoose": "^5.4.0",
+        "sha1": "^1.1.1"
+    }
+}
