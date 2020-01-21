@@ -3,22 +3,7 @@
  * @author v_koujianfeng
  */
 
-(function () { // 点透（传透）
-    /*const showConsole = true;
-    function bindEventFunction(obj, eventStr, func) {
-        // console.log(!!obj.addEventListener == true);    // true
-        // console.log(!!obj.attachEvent == true );    // false
-        if (obj.addEventListener) {
-            // 大多数浏览器支持, IE8 及以下不支持
-            obj.addEventListener(eventStr, func, false); // false 指定在捕获的阶段的时候不触发事件
-        } else {
-            // IE5 - IE10 支持
-            obj.attachEvent('on' + eventStr, function () {
-                func().call(obj);
-            });
-        }
-    }*/
-
+(function () {
     function getElementsByCssStr(cssStr) {
         if (document.querySelectorAll) {
             return document.querySelectorAll(cssStr);
@@ -187,8 +172,7 @@
         isJsonp: true, // 必传，到底是发 jsonp 请求，还是原生 ajax 请求
         jsonpFunc: 'jsonpFunc',
         type: 'GET',
-        // url: 'http://localhost:3000/platform/statistics',
-        url: 'http://' + window.location.host + '/platform/statistics',
+        url: 'https://developer.baidu.com/platform/statistics',
         data: {
             topicId,
             AK
@@ -203,12 +187,3 @@
         }
     });
 })();
-/*
-    {
-        url    'test.php',  // 请求地址
-        type    'POST',  // 请求类型，默认"GET"，还可以是"POST"
-        data    { 'b'    '异步请求'} // 传输数据
-        success    func // 请求成功的回调函数
-        error: funcError // 请求失败的回调函数
-    }
- */

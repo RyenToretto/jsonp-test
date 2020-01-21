@@ -6,20 +6,20 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
 
 // 原生 ajax 的 get 路由
-app.get("/jsonp", (request, response)=>{
+app.get("/platform/statistics", (request, response)=>{
     console.log('10');
     //获取请求参数
-    const {callback, diyParam1, diyParam2} = request.query;
+    const {callback, AK, topicId} = request.query;
 
-    console.log('service receive' + diyParam1);
-    console.log(diyParam2);
+    console.log('service receive' + topicId);
+    console.log(AK);
 
     const data = {
         status: 200,
         message: '服务器响应的数据',
         data: {
-            diyParam1: 'service receive ' + diyParam1,
-            diyParam2: 'service receive ' + diyParam2
+            topicId: 'service receive ' + topicId,
+            AK: 'service receive ' + AK
         }
     };    // 要响应给浏览器的数据
 
